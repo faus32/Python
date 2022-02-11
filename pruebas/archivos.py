@@ -4,18 +4,16 @@ import os
 from typing import runtime_checkable
 
 ruta="/home/faus/Descargas"
-archivos=os.listdir(ruta)
-
-# print (os,os.listdir(ruta))
-
+archivos=str(os.listdir(ruta))
 
 tarchivos=[]
 varchivo=""
+
 for letra in archivos:
     if (letra==","):
         # añadir archivo a la lista
         print (varchivo)
-        tarchivos.append(varchivo)
+        tarchivos.append(varchivo.strip())
         varchivo=""
     else:
         varchivo=varchivo+letra
