@@ -12,7 +12,7 @@ archivos=os.listdir(ruta)
 tarchivos=[]
 varchivo=""
 for letra in archivos:
-    if (letra==","):
+    if letra==",":
         # añadir archivo a la lista
         print (varchivo)
         tarchivos.append(varchivo)
