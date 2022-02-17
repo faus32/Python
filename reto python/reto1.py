@@ -1,6 +1,12 @@
 # Reto 1
 # Listar solo los archivos de la carpeta de descargas
 
+"""
+Reto 1
+
+Listar solo los archivos de la carpeta descargas del usuario
+
+"""
 from gi.repository import GLib 
 import os
 
