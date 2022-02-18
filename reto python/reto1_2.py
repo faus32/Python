@@ -12,10 +12,11 @@ import os
 """ 
 Funcion para comprobar si es un archivo o no
 
-Argumentos : vruta1   Recibira el valor del archivo o directorio
+Arguments : vruta1  {string} Recibira el valor del archivo o directorio
 
-Return true si es archivo false si no lo es
+Return {boolean} True si es archivo o false si no lo es
 """
+
 def imprimir (vruta1):
     vruta2=ruta_descargas+"/"+vruta1
     if os.path.isfile (vruta2):
@@ -37,6 +38,7 @@ contenido=str(os.listdir(ruta_descargas))
 
 
 # Separar nombres de archivos 
+
 tarchivos=[]
 varchivo=""
 
