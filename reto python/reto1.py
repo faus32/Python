@@ -20,7 +20,7 @@ print ("Directorio: "+ruta_descargas+"\n")
 contenido=str(os.listdir(ruta_descargas))
 
 
-# Separar nombres de archivos
+# Separar nombres de archivos 
 tarchivos=[]
 varchivo=""
 
