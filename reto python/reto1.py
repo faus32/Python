@@ -13,7 +13,7 @@ import os
 # Obtener ruta de descargas del usuario
 
 ruta_descargas=GLib.get_user_special_dir(GLib.UserDirectory.DIRECTORY_DOWNLOAD)
-print ("Directorio: "+ruta_descargas+"\n")
+print ("Directorio: {ruta_descargas}\n")
 
 # Obtener contenido de la carpeta de descargas
 
