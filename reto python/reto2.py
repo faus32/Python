@@ -13,6 +13,8 @@ from gi.repository import GLib
 
 directorio = Path(GLib.get_user_special_dir(GLib.UserDirectory.DIRECTORY_DOWNLOAD))
 
+print (directorio) 
+
 if directorio.is_dir():
             contador=0
             for archivo in[x for x in directorio.iterdir() if not x.is_dir()]:
