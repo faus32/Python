@@ -4,7 +4,8 @@
 # Crear archivo configuración.
 # Si archivo no existe crearlo y si existe cargar el directorio por defecto y visualizar imagenes
 
-# Usando tomli-2.0.1 para gestionar la configuracion
+# Usando toml-0.10.2 para gestionar la configuracion
+# Usado mimetypes para filtrar imagenes
 
 import toml
 import mimetypes
@@ -28,9 +29,11 @@ def abrir_configuracion():
             return configuration_file
 
 def listar_imagenes (ruta_imagenes):
-    print (ruta_imagenes)
+    for archivo in[x for x in ruta_imagenes.iterdir() if not x.is_dir()]:
+        if not archivo.is_dir() and mimetypes.guess_type(archivo)[0]=='image/jpeg':
+            print (archivo)
 
-# Comienzo de la aplicacion
+# Comienzo de la aplicacion{}
 
 archivo_configuracion="/home/faus/.config/diogenes/diogenes.conf"
 comprobar()
