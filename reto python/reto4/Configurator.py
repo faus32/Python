@@ -10,6 +10,7 @@ class Configurator():
         self.config=config
     
     def check_config (self):
+        # Comprobar si existen el directorio y el archivo de configuracion
         if not os.path.exists(self.path):
             os.mkdir(self.path)
             if not os.path.exists(self.path/self.config):
