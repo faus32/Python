@@ -11,7 +11,8 @@ def main(app,config):
     path = Path(xdg_config_home()) / app
     configurator = Configurator(path, config)
     configurator.check_config()
-    configurator.read_config()
+    listar_imagenes(configurator.read_config())
+    
     
 if __name__ == '__main__':
     APP = "diogenes"

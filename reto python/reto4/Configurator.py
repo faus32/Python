@@ -2,6 +2,7 @@
 
 import toml
 import os
+from pathlib import Path
 
 class Configurator():
     def __init__(self,path,config):
@@ -18,4 +19,7 @@ class Configurator():
                  toml.dump(datos,file_writer)
             
     def read_config(self):
-        print ("leer configuracion")
+        # Cargar datos de configuracion
+	    with open(self.path/self.config) as file:
+               configuration_file = toml.load(self.path/self.config)
+               return (Path(configuration_file['ruta']))
